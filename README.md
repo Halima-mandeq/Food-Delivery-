@@ -170,7 +170,7 @@ That role-based redirection is one of the most important architectural ideas in 
 
 ## Backend Architecture
 
-The backend is a lightweight PHP API that exposes multiple endpoints under `backend/api/`. Each endpoint handles one area of application behavior, such as authentication, product retrieval, order placement, admin statistics, or profile updates.
+The backend is a lightweight PHP API that exposes multiple endpoints under  Each endpoint handles one area of application behavior, such as authentication, product retrieval, order placement, admin statistics, or profile updates.
 
 ### Backend responsibilities
 
@@ -185,15 +185,6 @@ The backend is a lightweight PHP API that exposes multiple endpoints under `back
 - update customer profile information
 
 ### Configuration files
-
-- `backend/config/db.php`
-  - creates the PDO connection to MySQL
-  - uses the local database `food_delivery_db`
-
-- `backend/config/auth_roles.php`
-  - ensures the `users.role` column supports `user`, `admin`, and `delivery`
-  - creates or preserves the default delivery account
-
 - `backend/config/order_support.php`
   - ensures order tables and order-related columns exist
   - helps runtime compatibility for order features
